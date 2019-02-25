@@ -204,9 +204,5 @@ function submitRank() {
 
     window.alert("Rankings:\n1)" + rank_1 + "\n2)" + rank_2 + "\n3)" + rank_3 + "\n4)" + rank_4 + "\n5)" + rank_5);
 
-    $.ajax({
-        type: "POST",
-        url: "POSTs",
-        timeout: 2000
-    })
+    $.post('https://github.com/ElliottStokes/BBC_Technical_Test/edit/master/POSTs.txt', rank_1, rank_2, rank_3, rank_4, rank_5);
 }
