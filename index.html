@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Trainee (Web) BBC News JS Coding Test</title>
+
+    <link rel="stylesheet" href="StyleSheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="jquery.easyui.min.js"></script>
+    <script src="javascript.js"></script>
+
+    <!--<script src="data\article-1.json"></script>
+    <script src="data\article-2.json"></script>
+    <script src="data\article-3.json"></script>
+    <script src="data\article-4.json"></script>
+    <script src="data\article-5.json"></script>-->
+</head>
+<body>
+    <div id="header">
+        <h1>BBC Technical Test</h1>
+    </div>
+    <div id="content">
+        <h2>Navigation:</h2>
+        <ul>
+            <li><h3 class="contentArticle" onclick="showArticle(0)">Article 1</h3></li>
+            <li><h3 class="contentArticle" onclick="showArticle(1)">Article 2</h3></li>
+            <li><h3 class="contentArticle" onclick="showArticle(2)">Article 3</h3></li>
+            <li><h3 class="contentArticle" onclick="showArticle(3)">Article 4</h3></li>
+            <li><h3 class="contentArticle" onclick="showArticle(4)">Article 5</h3></li>
+        </ul>
+    </div>
+    <div id="buttonHolder">
+        <button id="_previous" class="_articleButton" onclick="changeArticle(-1)">&#10094 Previous</button>
+        <button id="_next" class="_articleButton" onclick="changeArticle(1)">Next &#10095</button>
+    </div>
+    <div class="articleDisplay" id="article_1">
+    </div>
+    <div class="articleDisplay" id="article_2">
+    </div>
+    <div class="articleDisplay" id="article_3">
+    </div>
+    <div class="articleDisplay" id="article_4">
+    </div>
+    <div class="articleDisplay" id="article_5">
+    </div>
+
+    <div id="rankingSection">
+        <h2 id="rankingSectionTitle">Article Raitings</h2>
+        <div class="articleRateDiv" id="rank_1"></div>
+        <div class="articleRateDiv" id="rank_2"></div>
+        <div class="articleRateDiv" id="rank_3"></div>
+        <div class="articleRateDiv" id="rank_4"></div>
+        <div class="articleRateDiv" id="rank_5"></div>
+        <button id="rankingSubmit" onclick="submitRank()">Submit Rankings</button>
+        <p>Drag and drop to set the ranking of the articles:</p>
+        <div id="articleHolder">
+            <div class="draggableDiv"><h2 class="draggableName">Article 1</h2></div>
+            <div class="draggableDiv"><h2 class="draggableName">Article 2</h2></div>
+            <div class="draggableDiv"><h2 class="draggableName">Article 3</h2></div>
+            <div class="draggableDiv"><h2 class="draggableName">Article 4</h2></div>
+            <div class="draggableDiv"><h2 class="draggableName">Article 5</h2></div>
+        </div>
+    </div>
+</body>
+</html>
